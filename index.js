@@ -13,8 +13,8 @@ const uploadPath = "C:/Users/user/Desktop/server/assets/image"; // Current Locat
 
 /*
 //For cPanel
-const uploadPath = "/home/abcdcom/api3/assets/image"; // Current Location / Path of Your Project.
-// const imageApi = "/home/abcdcom/api3/assets/image/my-image-file_dateVal_1724750054595_rickshaw.jpg";
+const uploadPath = "/home/abcdcom/abcd.com/api3/assets/image"; // Current Location / Path of Your Project.
+// const imageApi = "https://abcd.com/api3/assets/image/my-image-file_dateVal_1724753646937_WhatsApp%20Image%202024-08-22%20at%2012.29.07%20PM.jpeg";
 */
 
 app.get("/", (req, res) => {
