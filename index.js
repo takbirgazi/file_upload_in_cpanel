@@ -7,9 +7,15 @@ require("dotenv").config();
 app.use(express.json());
 app.use(cors());
 
-
+//For Localhost
 const uploadPath = "C:/Users/user/Desktop/server/assets/image"; // Current Location / Path of Your Project.
 // const imageApi = "C:/Users/user/Desktop/server/assets/image/my-image-file_dateVal_1724750054595_rickshaw.jpg";
+
+/*
+//For cPanel
+const uploadPath = "/home/abcdcom/api3/assets/image"; // Current Location / Path of Your Project.
+// const imageApi = "/home/abcdcom/api3/assets/image/my-image-file_dateVal_1724750054595_rickshaw.jpg";
+*/
 
 app.get("/", (req, res) => {
     res.send("Welcome to my website.");
