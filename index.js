@@ -8,8 +8,8 @@ app.use(express.json());
 app.use(cors());
 
 //For Localhost
-const uploadPath = "C:/Users/user/Desktop/server/assets/image"; // Current Location / Path of Your Project.
-// const imageApi = "C:/Users/user/Desktop/server/assets/image/my-image-file_dateVal_1724750054595_rickshaw.jpg";
+const uploadPath = "C:/Users/user/Desktop/file_upload_in_cpanel/assets/image"; // Current Location / Path of Your Project.
+// const imageApi = "C:/Users/user/Desktop/file_upload_in_cpanel/assets/image/my-image-file_dateVal_1724750054595_rickshaw.jpg";
 
 /*
 //For cPanel
