@@ -9,12 +9,12 @@ app.use(cors());
 
 //For Localhost
 const uploadPath = "C:/Users/user/Desktop/file_upload_in_cpanel/assets/image"; // Current Location / Path of Your Project.
-// const imageApi = "C:/Users/user/Desktop/file_upload_in_cpanel/assets/image/my-image-file_dateVal_1724750054595_rickshaw.jpg";
+// const imageApi = "C:/Users/user/Desktop/file_upload_in_cpanel/assets/image/image-file_gsp_1725957238411_mysql.png";
 
 /*
 //For cPanel
 const uploadPath = "/home/abcdcom/abcd.com/api3/assets/image"; // Current Location / Path of Your Project.
-// const imageApi = "https://abcd.com/api3/assets/image/my-image-file_dateVal_1724753646937_WhatsApp%20Image%202024-08-22%20at%2012.29.07%20PM.jpeg";
+// const imageApi = "https://abcd.com/api3/assets/image/image-file_gsp_1725957238411_mysql.png";
 */
 
 app.get("/", (req, res) => {
@@ -26,16 +26,17 @@ const storage = multer.diskStorage({
         cb(null, uploadPath)
     },
     filename: function (req, file, cb) {
-        cb(null, `${file.fieldname}_dateVal_${Date.now()}_${file.originalname}`)
+        cb(null, `${file.fieldname}_gsp_${Date.now()}_${file.originalname}`)
     }
 });
 
 const imageUpload = multer({ storage: storage });
 
-app.post('/upload', imageUpload.array("my-image-file"), (req, res) => {
+app.post('/upload', imageUpload.array("image-file"), (req, res) => {
     console.log('POST request received to /upload.');
     console.log('Axios POST body: ', req.body);
-    res.send('Upload Successfully!');
+    console.log(`${req.files[0].destination}/${req.files[0].filename}`);
+    res.send(`${req.files[0].destination}/${req.files[0].filename}`);
 });
 
 app.listen(port, () => {
